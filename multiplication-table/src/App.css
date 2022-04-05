@@ -1,0 +1,20 @@
+.App {
+  text-align: left;
+  margin: 20px 0 0 20px;
+}
+
+.que {
+  font-size: 25px;
+}
+
+.que span {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+
+.result {
+  font: 20px;
+  color: red;
+  padding-top: 10px;
+}
