@@ -1,0 +1,42 @@
+.App {
+  width: 300px;
+  text-align: left;
+  margin: 20px;
+}
+
+.tryInput input {
+  width: 80%;
+}
+
+.tryInput button {
+  font-weight: bold;
+}
+
+.info {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}
+
+.infoList{
+  font-size: 20px;
+  margin: 20px 0;
+  text-align: center;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.tryList{
+  margin-bottom: 20px;
+  text-align: center;
+}
+.tryList .tryNum {
+  font-weight: bold;
+  font-size: 20px;
+  /* border-bottom: 1px solid gray; */
+  margin-bottom: 5px;
+}
+
+.tryList .tryContent {
+  color: gray;
+}
