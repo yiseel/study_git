@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './App.css';
 import Try from './Try';
 
@@ -18,8 +18,15 @@ function App() {
   const [answer, setAnswer] = useState(getNumbers());
   const [tries, setTries] = useState([]);
   
+  const contentRef = useRef();
+
   const Sumbit = (e) => {
     e.preventDefault();
+
+    if(value.length < 4){
+      contentRef.current.focus();
+      return;
+    }
 
     if(value === answer.join('')){
       setTries((prevTries)=> {
@@ -63,6 +70,7 @@ function App() {
       <div> 연습 2. 숫자 야구</div>
       <div className='tryInput'>
         <input 
+          ref={contentRef}
           maxLength={4} 
           value={value} 
           onChange={(e)=> setValue(e.target.value)}
@@ -72,9 +80,9 @@ function App() {
       <div className='info'>시도 : {tries.length}차</div>
       <div>
         <div className='infoList'>내용 기록</div>
-        {tries.map((v,i)=>{
-          return <Try key={`${i + 1}차 시도`} tryInfo={v}/> 
-        })}
+        {tries.map((v,i)=>(
+          <Try key={`${i + 1}차 시도`} tryInfo={v}/> 
+        ))}
       </div>
     </div>
   );
