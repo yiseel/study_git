@@ -1,0 +1,32 @@
+.App {
+  width: 300px;
+  height: 300px;
+}
+
+.App .clickArea{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 300px;
+  color: #fff;
+}
+.App .waiting {
+  background-color: #2727db;
+}
+
+.App .ready {
+  background-color: #f53a3a;
+}
+
+.App .now {
+  background-color: #189418;
+}
+
+.App .info{
+    text-align: center;
+    margin-top: 10px;
+}
+.App .info button{
+  margin-top: 10px;
+  width: 100px;
+}
