@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+
+.App #compter {
+  width: 280px;
+  height: 360px;  
+  display: block;
+  margin: auto;
+}
+
+.App button {
+  width: 100px;
+  height: 50px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
