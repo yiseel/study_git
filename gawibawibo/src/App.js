@@ -55,7 +55,7 @@ function App() {
     if(diff === 0){
       setResult('비겼습니다');
     }else if ([-1, 2].includes(diff)){
-      setResult('이겼습니다');
+      setResult('이겼습니다!');
       setScore((preveState) => preveState + 1)
     }else {
       setResult('졌습니다');
