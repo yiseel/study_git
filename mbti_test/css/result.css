@@ -1,0 +1,20 @@
+#result {
+    display: none;
+    background-color: whitesmoke;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+    padding: 50px 30px;
+}
+
+#result .resultname{
+    font-size: 30px;
+}
+
+#shareResult {
+    background-color: whitesmoke;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+    padding: 50px 30px;
+}
