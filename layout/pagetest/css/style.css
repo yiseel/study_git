@@ -648,6 +648,12 @@
     border: 0;
     background: url(../img/dot.gif) 9px 8px no-repeat;
     padding-left: 18px;
+
+    display: none;
+}
+
+#cont-cont .cont .tab_menu ul li.active ul li {
+    display: block;
 }
 
 #cont-cont .cont .tab_menu ul li.active {
@@ -666,6 +672,7 @@
     padding: 0 0 3px 0;
     color: #222;
 }
+
 
 /* 게시판4 */
 #cont-cont .cont .notice4 {
@@ -739,51 +746,45 @@
     right: 5px;
 }
 
-#cont-cont .cont .gallery .gallery_btn ul {
-    overflow: hidden;
+#cont-cont .cont .gallery .gallery_btn button {
+    float: left; 
+    margin: 1px 2px; 
+    display: block; 
+    width: 23px; 
+    height: 23px; 
+    background: url(../img/icon.png) no-repeat;
+    border: 0 none;
 }
 
-#cont-cont .cont .gallery .gallery_btn ul li {
-    float: left;
-    margin: 1px 2px;
-}
-
-#cont-cont .cont .gallery .gallery_btn ul li a {
-    display: block;
-    width: 23px;
-    height: 23px;
-    background: url(../img/icon.png) 0 0 no-repeat;
-}
-
-#cont-cont .cont .gallery .gallery_btn ul .gb_icon1 a {
+#cont-cont .cont .gallery .gallery_btn .gb_icon1 {
     background-position: -150px -120px;
 }
 
-#cont-cont .cont .gallery .gallery_btn ul .gb_icon2 a {
+#cont-cont .cont .gallery .gallery_btn .gb_icon2 {
     background-position: -150px -143px;
 }
 
-#cont-cont .cont .gallery .gallery_btn ul .gb_icon3 a {
+#cont-cont .cont .gallery .gallery_btn .gb_icon3 {
     background-position: -150px -166px;
 }
 
-#cont-cont .cont .gallery .gallery_btn ul .gb_icon4 a {
+#cont-cont .cont .gallery .gallery_btn .gb_icon4 {
     background-position: -150px -189px;
 }
 
-#cont-cont .cont .gallery .gallery_btn ul .gb_icon1 a:hover {
+#cont-cont .cont .gallery .gallery_btn .gb_icon1:hover {
     background-position: -173px -120px;
 }
 
-#cont-cont .cont .gallery .gallery_btn ul .gb_icon2 a:hover  {
+#cont-cont .cont .gallery .gallery_btn .gb_icon2:hover  {
     background-position: -173px -143px;
 }
 
-#cont-cont .cont .gallery .gallery_btn ul .gb_icon3 a:hover  {
+#cont-cont .cont .gallery .gallery_btn .gb_icon3:hover  {
     background-position: -173px -166px;
 }
 
-#cont-cont .cont .gallery .gallery_btn ul .gb_icon4 a:hover  {
+#cont-cont .cont .gallery .gallery_btn .gb_icon4:hover  {
     background-position: -173px -189px;
 }
 
@@ -921,4 +922,30 @@
 
 #footer-wrap .footer .w3c {
     margin-top: 15px;
+}
+
+
+/* 레이어 팝업 */
+#layer {
+    width: 700px; 
+    display: none; 
+    position: fixed; 
+    top: 50px; 
+    left: 50px; 
+    border: 10px solid #dceff7; 
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+} 
+#layer img {
+    width: 100%; 
+    display: block;
+}
+#layer .close {
+    position: absolute; 
+    right: 20px; 
+    top: 20px; 
+    background: #0093bd; 
+    padding: 1px 2px; color: #fff;
+}
+#layer .close:hover {
+    text-decoration: underline;
 }
