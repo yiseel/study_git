@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tabList li {
+            width: 100px;
+            border: 1px solid;
+            float: left;
+            list-style: none;
+            cursor: pointer;
+        }
+
+        #textArea .text {
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            display: none;
+        }
+
+        #textArea .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul class="tabList" id="tabList">
+        <li class="menu" data-list="1">메뉴1</li>
+        <li class="menu" data-list="2">메뉴2</li>
+        <li class="menu" data-list="3">메뉴3</li>
+    </ul>
+    <div id="textArea">
+        <div data-list="menu1" class="text text1">111111</div>
+        <div data-list="menu2" class="text text2">222222</div>
+        <div data-list="menu3" class="text text3">333333</div>
+    </div>
+    <script>
+        var menu = document.getElementById('tabList');
+        var menuList = document.getElementsByClassName('menu');
+        var textArea = document.getElementsByClassName('text');
+
+
+        menu.addEventListener('click', function(e){
+            var $this = e.target;
+            var dataList = $this.dataset.list;
+            // var textList = textArea.dataset.list
+            for(var i = 0; i < textArea.length; i ++){
+                textArea[i].className = textArea[i].className.replace(" active", "");
+            }
+            
+            textArea[dataList-1].classList.add("active");
+            // console.log(textList)
+            // if(textList == dataList){
+            //     textArea.classList.add("active");
+            // } 
+        });
+    </script>
+</body>
+</html>
