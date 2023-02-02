@@ -1,0 +1,53 @@
+{
+  "homeList":
+  [
+    {
+      "main":true,
+      "ptn":"신한카드",
+      "prj":"MyAUTO",
+      "prj2":"RENEWAL",
+      "url":"WorksDetail1.html"
+    },
+    {
+      "main":true,
+      "ptn":"신한카드",
+      "prj":"ONLINE CHANNEL MAINTENANCE",
+      "prj2":"",
+      "url":"WorksDetail3.html"},
+    {
+      "main":true,
+      "ptn":"신한카드",
+      "prj":"ShinhanCard MOBILE",
+      "prj2":"RENEWAL",
+      "url":"WorksDetail5.html"
+    },
+    {
+      "main":true,
+      "ptn":"KEB하나은행",
+      "prj":"KEB Hana Bank MAINTENANCE",
+      "prj2":"",
+      "url":false
+    },
+    {
+      "main":true,
+      "ptn":"하나카드",
+      "prj":"HANA MEMBERS APP",
+      "prj2":"RENEWAL",
+      "url":"WorksDetail2.html"
+    },
+    {
+      "main":true,
+      "ptn":"SC제일은행",
+      "prj":"SELF BANK APP",
+      "prj2":"LAUNCHING",
+      "url":"WorksDetail4.html"
+    },
+    {
+      "main":false,
+      "ptn":"SC제일은행",
+      "prj":"DIGITAL COUNTER",
+      "prj2":"",
+      "url":false
+    }
+  ]
+}

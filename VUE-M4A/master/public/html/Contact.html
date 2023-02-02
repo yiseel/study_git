@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Contact : MEDIA4TH ALLIANCE</title>
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta name="title" content="미디어포스얼라이언스 오시는 길" />
+	<meta name="description" content="미디어포스, 1세대 웹에이전시, 대형프로젝트, 웹사이트, 모바일, UI/UX, 온라인마케팅">
+	<meta name="keywords" content="미디어포스, 1세대 웹에이전시, 대형프로젝트, 웹사이트, 모바일, UI/UX, 온라인마케팅">
+	<link rel="canonical" href="http://www.m4a.co.kr/html/Contact.html">
+	<script src="../js/m4a.js"></script>
+</head>
+<body>
+
+<div id="pageWrap" class="page-wrap">
+	<div id="headBanner" class="head-banner" role="banner"></div>
+	<header id="header" class="header" data-html-load="inc/header.shtml"></header>
+
+	<div id="container" class="container" >
+		<main id="mainContent" class="main-content contact" role="main">
+			<section class="hidden-obj" aria-hidden="true">
+				<h1>M4A 찾아오시는 길</h1>
+			</section>
+
+			<section  class="contact-sec">
+				<article class="contact-art1">
+                    <h2 class="hidden-obj" aria-hidden="true">미디어포스얼라이언스 회사 주소</h2>
+                    <p class="address">서울시 서초구 <br> 신반포로 304 H1빌딩 <br> 미디어포스얼라이언스</p>
+                    <p class="address-eng">Media4th Alliance, inc. H1 Bldg, <br> 304, Shinbanpo-ro, Seocho-gu, Seoul, Korea</p>
+                    <div class="info">
+                        <p class="tel"><b>TEL.</b> <a href="tel:02-536-0518">02. 536. 0518</a></p>
+                        <p class="fax"><b>FAX.</b> 02. 536. 0578</p>
+                    </div>
+                    <div class="brochure" data-html-load="inc/brochure.shtml"></div>
+                </article>
+                <article class="contact-art2">
+                    <div id="m4aMap" class="m4a-map" ></div>
+                </article>
+			</section>
+		</main>
+	</div>
+
+	<footer id="footer" class="footer" data-html-load="inc/footer.shtml"></footer>
+</div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8ed8b918e8cc516006a162814d55a9fd"></script>
+<script>
+    var container = document.getElementById('m4aMap');
+    var options = {
+        center: new kakao.maps.LatLng(37.50968, 127.01715),
+        level: 2
+    };
+
+    var map = new kakao.maps.Map(container, options);
+
+
+    var imageSrc = '../images/mapin.webp' // 마커이미지 주소
+    var imageSize = new kakao.maps.Size(68, 24) // 마커이미지 크기
+    var imageOption = { offset: new kakao.maps.Point(2, 26) } // 마커이미지 좌표
+    //  마커이미지 생성
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
+    var markerPosition = new kakao.maps.LatLng(37.50960, 127.01720)
+    // 마커 생성
+    var marker = new kakao.maps.Marker({
+        position: markerPosition,
+        image: markerImage
+    })
+    // 마커표시
+    marker.setMap(map)
+    // 센터 위치 리로드
+    function reLay () {
+        map.relayout()
+    }
+    function setCenter () {
+        var moveLatLon = new kakao.maps.LatLng(37.50960, 127.01720)
+        map.setCenter(moveLatLon)
+    }
+    window.addEventListener('resize', function () {
+        setCenter()
+        reLay()
+    })
+</script>
+</body>
+</html>
+

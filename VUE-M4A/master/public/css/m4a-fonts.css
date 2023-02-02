@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    font-weight: 300;
+    src: local('Spoqa Han Sans Neo Light'),
+    url('/fonts/SpoqaHanSansNeo-Light.woff2') format('woff2');
+	font-display: swap;
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    font-weight: 400;
+    src: local('Spoqa Han Sans Neo Regular'),
+    url('/fonts/SpoqaHanSansNeo-Regular.woff2') format('woff2');
+	font-display: swap;
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    font-weight: 700;
+    src: local('Spoqa Han Sans Neo Medium'),
+    url('/fonts/SpoqaHanSansNeo-Medium.woff2') format('woff2');
+	font-display: swap;
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    font-weight: 900;
+    src: local('Spoqa Han Sans Neo Bold'),
+	url('/fonts/SpoqaHanSansNeo-Bold.woff2') format('woff2');
+	font-display: swap;
+
+}
+
+
+@font-face {
+    font-family: 'NanumSquareRound';
+    font-weight: 300;
+    src: local('NanumSquareRoundL'),
+    url('/fonts/NanumSquareRoundL.woff2') format('woff2');
+	font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquareRound';
+    font-weight: 400;
+    src: local('NanumSquareRoundR'),
+    url('/fonts/NanumSquareRoundR.woff2') format('woff2');
+	font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquareRound';
+    font-weight: 700;
+    src: local('NanumSquareRoundB'),
+    url('/fonts/NanumSquareRoundB.woff2') format('woff2');
+	font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquareRound';
+    font-weight: 900;
+    src: local('NanumSquareRoundEB'),
+	url('/fonts/NanumSquareRoundEB.woff2') format('woff2');
+	font-display: swap;
+
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 300;
+    src: local('NanumSquareL'),
+    url('/fonts/NanumSquareL.woff2') format('woff2');
+	font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    src: local('NanumSquareR'),
+    url('/fonts/NanumSquareR.woff2') format('woff2');
+	font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    src: local('NanumSquareB'),
+    url('/fonts/NanumSquareB.woff2') format('woff2');
+	font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 900;
+    src: local('NanumSquareEB'),
+	url('/fonts/NanumSquareEB.woff2') format('woff2');
+	font-display: swap;
+
+}
+/* 300 lighter < 400 normal < 600 bold < 800 ex-blod */

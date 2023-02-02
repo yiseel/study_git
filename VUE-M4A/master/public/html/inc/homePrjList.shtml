@@ -1,0 +1,88 @@
+<div id="homePrjList" class="home-prj-list" aria-hidden="true" aria-label="최근 프로젝트">
+    
+</div>
+<script>
+(function () {
+    //json parsing n Dom draw
+    var target= document.getElementById('homePrjList');
+    var html = [];
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "../json/home.json", true);
+    xhttp.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200) {
+            var data1 = JSON.parse(this.response);
+            html.push('<div class="prj-list-wrap">\n<ul>')
+            data1.homeList.forEach(function(elm, idx){
+                html.push('<li class="prj-item prj-item'+parseInt(idx + 1)+'">\n');
+                if(elm.url){
+                    html.push('     <a href="' + elm.url + '" class="link-block" role="button">'
+                        + '         <div class="text1">' +  elm.ptn +'</div>\n'
+                        + '         <div class="contract">' + elm.prj + '</div>\n</a>\n');
+                }else{
+                    html.push('     <div class="link-block">'
+                        + '         <div class="text1">' +  elm.ptn +'</div>\n'
+                        + '         <div class="contract">' + elm.prj + '</div>\n</div>\n');
+                }
+                html.push('</li>\n');
+            });
+            html.push('<li class="under-box"><a href="Works.html" class="btn-all-project">VIEW <br class="pc-hide"> ALL PROJECT</a></li></ul>\n<button id="homePrjClose" class="btn-close-w">닫기</button>');
+             
+            target.innerHTML=html.join('');
+            m4aComm.ariaHidden('[aria-hidden=true]',true);
+
+            //document.querySelector('#wheelZone').addEventListener('wheel', (e) => {
+            window.addEventListener('wheel', (e) => {
+                if (e.deltaY > 0 || e.keyCode === 40) {
+                    processOpen()
+                }
+            });
+            //document.querySelector('#homePrjList').addEventListener('wheel', (e) => {
+            window.addEventListener('wheel', (e) => {   
+                if (e.deltaY < 0 || e.keyCode === 38) {
+                    processClose()
+                }
+            })
+            window.addEventListener('touchstart', function (ev) {
+                ts = parseInt(ev.touches[0].pageY)
+            });
+
+            var ts, te;
+            window.addEventListener('touchend', function (ev) {                                                   
+            te = parseInt(ev.changedTouches[0].pageY)
+                if (ts - te > 200) {
+                    processOpen()
+                    
+                } else if (ts - te < -100) {
+                     processClose()
+                }
+            });
+            document.querySelector('#homePrjClose').addEventListener('click',function(){
+                processClose()
+            })
+            document.querySelector('#btnHomeMore').addEventListener('click',function(){
+                processOpen()
+            })
+            function processClose(){
+                document.querySelector('body').classList.remove('homePrjOpen');
+                document.getElementById('homePlay').click();
+                m4aComm.ariaHidden('#homePrjList', true);
+                m4aComm.ariaHidden('#container, #skipNav, #container',false);
+                document.querySelector('#homePrjList').removeAttribute('tabindex')
+                setTimeout(() =>{document.querySelector('#btnHomeMore').focus()},300);
+            }
+            function processOpen(){
+                document.querySelector('body').classList.add('homePrjOpen')
+                document.getElementById('homeStop').click();
+                m4aComm.ariaHidden('#homePrjList', false);
+                m4aComm.ariaHidden('#container, #skipNav, #container',true);
+                document.querySelector('#homePrjList').setAttribute('tabindex','0')
+                setTimeout(() =>{document.querySelector('#homePrjList').focus()},300);
+            }
+        };      
+    }
+    xhttp.send();
+   
+    
+})();
+
+</script>
