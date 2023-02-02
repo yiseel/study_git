@@ -10,7 +10,7 @@
             display: flex;
             list-style: none;
         }
-        #menuList .menu .menuName {
+        .menu .menuName {
             display: block;
             width: 100px;
             height: 30px;
@@ -19,13 +19,13 @@
             line-height: 30px;
         }
 
-        #menuList .menu.active .menuName {
+        .menu.active .menuName {
             border-bottom: 5px solid pink;
         } 
 
-        #menuList .menu .text {
+        .menu .text {
             width: 500px;
-            height: 500px;
+            height: 200px;
             border: 1px solid;
             position: absolute;
             top:70px;
@@ -33,7 +33,7 @@
             display: none;
         }
 
-        #menuList .menu.active .text {
+        .menu.active .text {
             display: block;
         }
 
@@ -41,10 +41,33 @@
             color:#000;
             text-decoration: none;
         }
+
+
+        #menuList2 {
+            display: flex;
+            list-style: none;
+
+            position: absolute;
+            top: 300px;
+        }
     </style>
 </head>
 <body>
-    <ul id="menuList">
+    <ul id="menuList" class="m_list">
+        <li class="menu active">
+            <a href="#" class="menuName">메뉴 1</a>
+            <div class="text text1"> 내용 1</div>
+        </li>
+        <li class="menu">
+            <a href="#" class="menuName">메뉴 2</a>
+            <div class="text text2"> 내용 2</div>
+        </li>
+        <li class="menu">
+            <a href="#" class="menuName">메뉴 3</a>
+            <div class="text text3"> 내용 3</div>
+        </li>
+    </ul>
+    <ul id="menuList2" class="m_list">
         <li class="menu active">
             <a href="#" class="menuName">메뉴 1</a>
             <div class="text text1"> 내용 1</div>
@@ -68,9 +91,11 @@
                 e.preventDefault();
                 
                 var parent = this.parentElement;
+                var p = parent.parentElement;
+                var c = p.children;
 
-                for(var j = 0; j < menuParent.length; j ++ ) {
-                    menuParent[j].classList.remove('active');
+                for(var j = 0; j < c.length; j ++ ) {
+                    c[j].classList.remove('active');
                 }
                 parent.classList.add('active');
 
